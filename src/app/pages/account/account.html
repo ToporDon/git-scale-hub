@@ -1,8 +1,15 @@
-<p>
-  account works!
-</p>
-
-<a [routerLink]="['/register']">register</a>
-
-<a [routerLink]="['/login']">login</a>
+<div class="app-content">
+  <div class="group">
+    <div class="form">
+      <button mat-raised-button color="warn" type="submit"  [routerLink]="['/login']">
+        <!-- <a [routerLink]="['/login']">Login</a> -->Login
+      </button>
+      <br>
+      <br>
+      <button mat-raised-button color="warn" type="submit" [routerLink]="['/register']">
+        <!-- <a [routerLink]="['/register']">Register</a> -->Register
+      </button>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>

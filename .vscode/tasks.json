@@ -4,25 +4,6 @@
     "isShellCommand": true,
     "args": [],
     "tasks": [
-        // {
-        //     "command": "watch",
-        //     "args": [
-        //         "run"
-        //     ],
-        //     "isBackground": true
-        // },
-        // {
-            
-        //     "options" : {
-        //         "cwd": "${workspaceRoot}"
-        //     },   
-        //     "command": "ng",
-        //     "args": [
-        //         "build --watch"
-        //     ],
-        //     "isShellCommand": true,
-        //     "showOutput": "always"
-        // },
         {
             "taskName": "build",
             "args": [
@@ -32,15 +13,4 @@
             "problemMatcher": "$msCompile"
         }
     ]
-    // "version": "0.1.0",
-    // "command": "${workspaceRoot}/build.cmd",
-    // "showOutput": "always",
-    // "args": [],
-    // "tasks": [
-    //     {
-    //         "taskName": "build",
-    //         "isBuildCommand": true,
-    //         "showOutput": "always"
-    //     }
-    // ]
 }

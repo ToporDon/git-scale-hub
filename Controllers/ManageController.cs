@@ -17,7 +17,7 @@ using git_scale_hub.Services;
 namespace git_scale_hub.Controllers
 {
     [Authorize]
-    [Route("[controller]/[action]")]
+    [Route("api/[controller]/[action]")]
     public class ManageController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

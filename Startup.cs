@@ -29,8 +29,11 @@ namespace git_scale_hub
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // services.AddDbContext<ApplicationDbContext>(options =>
+            //     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddDbContext<ApplicationDbContext>
+                (options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -73,12 +76,6 @@ namespace git_scale_hub
             });
 
             app.UseStaticFiles();
-
-            // app.UseStaticFiles(new StaticFileOptions()
-            // {
-            //     FileProvider = new PhysicalFileProvider(
-            //         Path.Combine(Directory.GetCurrentDirectory(), @"dist"))
-            // });
 
             app.UseDefaultFiles();
 
